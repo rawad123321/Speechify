@@ -11,27 +11,26 @@ How to Run Speechify Locally
 1. Enable Developer Mode in Chrome
 Open Google Chrome.
 
-Go to chrome://extensions/.
+2. Go to chrome://extensions/.
 
-Toggle Developer Mode on (top right corner).
+3. Toggle Developer Mode on (top right corner).
 
-2. Load the Extension
-Click Load unpacked.
+4. Load the Extension Click Load unpacked.
 
-Select the project folder that contains the manifest.json file.
+5. Select the project folder that contains the manifest.json file.
 
 Speechify will now appear in your list of extensions.
 
-How to Use Speechify
-Select any text or paragraph on a webpage.
+How to Use Speechify:
+1. Select any text or paragraph on a webpage.
 
-Right-click the selection and choose Speechify from the context menu.
+2. Right-click the selection and choose Speechify from the context menu.
 
-View the translation displayed by the extension.
+3. View the translation displayed by the extension.
 
-To listen to the translated text, click Read Translation.
+4. To listen to the translated text, click Read Translation.
 
-Use the Speechify icon in the Chrome toolbar to Pause, Resume, or Stop the speech at any time.
+5. Use the Speechify icon in the Chrome toolbar to Pause, Resume, or Stop the speech at any time.
 
-Change the language or voice settings through the extension controls to personalize your listening experience.
+6. Change the language or voice settings through the extension controls to personalize your listening experience.
 
