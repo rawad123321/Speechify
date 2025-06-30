@@ -1,3 +1,4 @@
+# Speechify
 
 Speechify is a Text-to-Speech (TTS) Chrome extension created by Rawad to help language learners, individuals with visual impairments such as dyslexia, and anyone who prefers listening over reading.
 
@@ -7,7 +8,7 @@ In addition, Speechify displays a translation of the selected text. If you want 
 
 Speechify aims to make web content more accessible and enjoyable for everyone.
 
-How to Run Speechify Locally
+## How to Run Speechify Locally
 1. Enable Developer Mode in Chrome
 Open Google Chrome.
 
@@ -21,7 +22,7 @@ Open Google Chrome.
 
 Speechify will now appear in your list of extensions.
 
-How to Use Speechify:
+## How to Use Speechify:
 1. Select any text or paragraph on a webpage.
 
 2. Right-click the selection and choose Speechify from the context menu.
