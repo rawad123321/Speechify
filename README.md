@@ -1,4 +1,4 @@
-Speechify
+
 Speechify is a Text-to-Speech (TTS) Chrome extension created by Rawad to help language learners, individuals with visual impairments such as dyslexia, and anyone who prefers listening over reading.
 
 Users can select any text on a webpage, right-click, and choose "Speechify" to have the selected text read aloud. The extension also includes controls to pause, resume, or stop the speech at any time using the buttons on the extension toolbar.
