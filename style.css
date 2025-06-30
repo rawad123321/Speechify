@@ -1,85 +1,272 @@
+:root {
+  --primary-color: rgb(140, 140, 140);
+  --hover-color: white;
+  --background-color: black;
+  --border-radius: 20px;
+  --transition-speed: 0.3s;
+}
+
 * {
-  background-color: black ;
-  color:  rgb(140, 140, 140);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#pauseBtn {
-  color: rgb(140, 140, 140);
-  font-size: 20px;
+body {
+  background-color: var(--background-color);
+  color: var(--primary-color);
   font-family: "Vogue", sans-serif;
-  border-radius: 20px;
-  background-color: black;
-  height: 35px;
-}
-#resumeBtn {
-  color: rgb(140, 140, 140);
-  font-size: 20px;
-  font-family: "Vogue", sans-serif;
-  border-radius: 20px;
-  background-color: black;
-  height: 35px;
+  min-width: 300px;
+  padding: 20px;
 }
 
-#stopBtn {
-  color:  rgb(140, 140, 140);
-  font-size: 20px;
-  font-family: "Vogue", sans-serif;
-  border-radius: 20px;
-  background-color: black;
-  height: 35px;
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#logo {
+  background-color: transparent;
+  margin-bottom: 10px;
 }
 
 #header {
-  text-align: center;
-  font-size: 20px;
-  font-family: "Vogue", sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-#description{
-  text-align: center;
-  font-size: 15px;
-  font-family: cursive;
+.description {
+  margin-bottom: 20px;
 }
 
-#btns {
+#description {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+.controls {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.voice-settings {
+  margin-bottom: 20px;
+}
+
+.setting-group {
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.setting-group label {
+  min-width: 80px;
+}
+
+select, input[type="range"] {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  color: var(--primary-color);
+  padding: 5px 10px;
+  font-family: inherit;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 5px;
+  background: var(--primary-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: var(--hover-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.control-buttons {
+  display: flex;
   justify-content: space-around;
-  margin-top: 40px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-#pauseBtn:hover {
-  font-size: 25px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-  height: 40px;
-  color: white;
+.control-buttons button {
+  flex: 1;
+  min-width: 80px;
+  max-width: 120px;
 }
 
-#resumeBtn:hover {
-  font-size: 25px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-  height: 40px;
-  color: white;
+button {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-family: inherit;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all var(--transition-speed);
 }
 
-#stopBtn:hover {
-  font-size: 25px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-  height: 40px;
-  color: white;
+button:hover:not(:disabled) {
+  color: var(--hover-color);
+  border-color: var(--hover-color);
+  transform: scale(1.05);
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#playBtn {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+}
+
+#playBtn:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#readTranslatedBtn {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+}
+
+#readTranslatedBtn:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.status {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.status-indicator {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#statusText {
+  font-size: 14px;
+}
+
+/* Translation Preview */
+.translation-preview {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.translation-preview h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.preview-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.preview-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#originalText {
+  border-left: 3px solid var(--primary-color);
+}
+
+#translatedText {
+  border-left: 3px solid var(--hover-color);
+  min-height: 50px;
+}
+
+/* Hover effects */
 #header:hover {
-  color: white;
-  text-shadow: 10px 10px 10px black;
-  text-decoration: underline solid 2px white;
-
+  color: var(--hover-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-#description:hover{
- color: white;
+#description:hover {
+  color: var(--hover-color);
 }
- 
- #logo{
-  background-color: white;
- }
+
+/* Active states */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Focus states for accessibility */
+button:focus, select:focus, input:focus {
+  outline: 2px solid var(--hover-color);
+  outline-offset: 2px;
+}
+
+/* Translation status styles */
+.translation-status {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+.translation-status.error {
+  color: #ff6b6b;
+}
+
+.translation-status.loading {
+  color: var(--hover-color);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.preview-text p.error {
+  border-left-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.preview-text p.loading {
+  border-left-color: var(--hover-color);
+  position: relative;
+}
+
+.preview-text p.loading::after {
+  content: "...";
+  position: absolute;
+  right: 10px;
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0% { content: "."; }
+  33% { content: ".."; }
+  66% { content: "..."; }
+  100% { content: "."; }
+}

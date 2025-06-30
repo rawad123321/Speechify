@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speechify</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.cdnfonts.com/css/vogue" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <img src="images/Speechify (1).png" alt="Speechify Logo" width="250" id="logo" />
+      <h1 id="header">Welcome Listeners</h1>
+    </header>
+
+    <main>
+      <section class="description">
+        <p id="description">Speechify is a TTS Chrome extension created by Rawad to assist language learners, individuals with visual impairments like dyslexia, and those who prefer listening over reading. Users can simply select any text on a webpage, right click, and click on "Speechify" to have it read aloud.</p>
+      </section>
+
+      <section class="controls">
+        <div class="voice-settings">
+          <div class="setting-group">
+            <label for="languages">Language:</label>
+            <select id="languages" aria-label="Select language">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+              <option value="pt">Portuguese</option>
+              <option value="it">Italian</option>
+              <option value="ru">Russian</option>
+              <option value="de">German</option>
+              <option value="nl">Dutch</option>
+              <option value="pl">Polish</option>
+              <option value="ar">Arabic</option>
+              <option value="zh">Chinese</option>
+              <option value="ja">Japanese</option>
+              <option value="ko">Korean</option>
+              <option value="hi">Hindi</option>
+              <option value="tr">Turkish</option>
+              <option value="sv">Swedish</option>
+              <option value="da">Danish</option>
+              <option value="fi">Finnish</option>
+              <option value="el">Greek</option>
+              <option value="cs">Czech</option>
+              <option value="hu">Hungarian</option>
+              <option value="ro">Romanian</option>
+              <option value="sk">Slovak</option>
+              <option value="bg">Bulgarian</option>
+              <option value="hr">Croatian</option>
+              <option value="sl">Slovenian</option>
+              <option value="et">Estonian</option>
+              <option value="lv">Latvian</option>
+              <option value="lt">Lithuanian</option>
+            </select>
+          </div>
+
+          <div class="setting-group">
+            <label for="voices">Voice:</label>
+            <select id="voices" aria-label="Select voice">
+            </select>
+          </div>
+
+          <div class="setting-group">
+            <label for="rate">Speed:</label>
+            <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+            <span id="rateValue">1.0</span>
+          </div>
+        </div>
+
+        <div class="control-buttons">
+          <button id="playBtn" aria-label="Play speech">Play</button>
+          <button id="pauseBtn" aria-label="Pause speech">Pause</button>
+          <button id="resumeBtn" aria-label="Resume speech">Resume</button>
+          <button id="stopBtn" aria-label="Stop speech">Stop</button>
+          <button id="readTranslatedBtn" aria-label="Read translated text">Read Translation</button>
+        </div>
+
+        <div class="status">
+          <div class="status-indicator">
+            <span id="statusText">Ready</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="translation-preview">
+        <h3>Translation Preview</h3>
+        <div class="preview-text">
+          <p id="originalText">Select text on any webpage to see the translation here.</p>
+          <p id="translatedText"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
